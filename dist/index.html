@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test Page</title>
+    <script src="/bundle.js"></script>
+</head>
+
+<body>
+    <div>
+        <h1>Проверям чо каво</h1>
+    </div>
+    <div>
+        <form
+            id="form81527136" name="form81527136" role="form"
+            action="https://friendzone.bot/money/buy/OTE/eWFuZGV4/"
+            method="POST" data-formactiontype="1" class="js-form-proccess">
+            <input type="text" name="name" value="" placeholder="Екатерина II Алексеевна">
+            <input type="hidden" name="cookie" tabindex="-1" value="empty">
+            <button type="submit">Перейти к оплате</button>
+        </form>
+    </div>
+    <div>
+        <code>
+        </code>
+    </div>
+    <script>
+        var h1 = document.querySelector('h1');
+        var code = document.querySelector('code');
+        var form = document.getElementById('form81527136');
+        var onMutate = function() {
+            code.innerText = form.innerHTML;
+        };
+        var mutationObserver = new MutationObserver(onMutate);
+        mutationObserver.observe(form, {
+            attributes: true,
+            childList: true,
+            subtree: true,
+            characterData: true,
+            characterDataOldValue: true
+        });
+        onMutate();
+    </script>
+</body>
+
+</html>
